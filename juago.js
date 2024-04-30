@@ -63,7 +63,7 @@ const paraGameOver = () => {
         anadirRankings(nombreJugador, puntos); // Añade la entrada a la tabla de clasificación
     }
     clearInterval(setIntervalId); 
-    alert("Game Over! Press OK to replay..."); 
+    alert("Buena suerte a la próxima! Dale al OK para empezar otra vez..."); 
     location.reload(); // Recarga la página para reiniciar el juego
 };
 
