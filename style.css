@@ -1,0 +1,143 @@
+/* Importa la fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Establece estilos básicos para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Usa la fuente Roboto para todos los elementos */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  background-image: url(https://img.freepik.com/vector-gratis/paisaje-bosque-desertico-escena-atardecer-oasis_1308-56109.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cuadro {
+  width: 65vmin; 
+  height: 70vmin; 
+  display: flex;
+  overflow: hidden;
+  flex-direction: column; 
+  justify-content: center;
+  border-radius: 5px; /* Agrega esquinas redondeadas */
+  background: #218639; 
+}
+
+.puntuaciones {
+  color: #B8C6DC; 
+  font-weight: 500;  
+  padding: 22px 26px; 
+  display: flex; 
+  justify-content: space-between;
+}
+
+.tablero {
+  background-image: url(https://previews.123rf.com/images/chekman/chekman1512/chekman151200035/50201499-tablero-de-ajedrez-verde-y-blanco-sin-patr%C3%B3n-de-cuadros-verdes-y-blancos.jpg);
+  height: 100%; 
+  width: 100%; 
+  display: grid; 
+  background-size: 80% 60%; 
+  background-position: center bottom; 
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr); /* Establece la cuadrícula */
+}
+.tablero .food {
+  background: #ff0011; 
+}
+
+.tablero .head {
+  background: #ffc800; 
+}
+
+.controles {
+  display: none; /* Oculta los controles por defecto */
+  justify-content: space-between;
+}
+
+.controles i {
+  padding: 25px 0; 
+  text-align: center;
+  color: #ff6a00; /* Color del texto */
+  width: calc(100% / 4); 
+  cursor: pointer; 
+  border-right: 1px solid #fb0000; 
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.cuadro {
+  margin-bottom: 20px;
+}
+
+.ranking {
+  width: 100%;
+  max-width: 100vmin; 
+}
+
+.ranking h2 {
+  margin-bottom: 10px;
+  background-color: #fb0000; 
+}
+
+#ranking {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+#tablaRanking th, #tablaRanking td {
+  border: 1px solid #000000; 
+  padding: 8px;
+  text-align: left; 
+  font-family: 'Times New Roman', Times, serif; 
+  background-color: rgb(203, 22, 28); 
+  width: 50% ;
+}
+
+#tablaRanking th {
+  background-color: #000000; 
+}
+
+@media screen and (max-width: 1024px) {
+  .cuadro {
+    width: 90vmin;
+    height: 115vmin; 
+  }
+  .puntuaciones {
+    font-size: 1rem;
+    padding: 15px 27px; 
+  }
+  .controles {
+    display: flex; 
+  }
+  .controles i {
+    padding: 15px 0; /* Espaciado interno */
+    font-size: 1rem; 
+  }
+  .tablero {
+    background-size: 80% 70%;
+  }
+
+  .ranking {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #tablaRanking {
+    font-size: 0.8rem; 
+  }
+
+  #tablaRanking th, #tablaRanking td {
+    padding: 5px; 
+  }
+}
