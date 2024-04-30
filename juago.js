@@ -6,16 +6,16 @@ const tablaDeRankings = document.getElementById("tablaRanking");
 const controles = document.querySelectorAll(".controles i");
 
 let final = false; //juego terminado
-let comidaX, comidaY; // Posición de la comida en el tablero
 let snakeX = 5, snakeY = 5; // Posición inicial de la cabeza de la serpiente
-let velocidadX = 0, velocidadY = 0; // Velocidad de movimiento de la serpiente
+let comidaX, comidaY; // Posición de la comida en el tablero
 let cuerpo = []; // Array que representa el cuerpo de la serpiente
-let setIntervalId; // ID del intervalo para actualizar el juego
+let velocidadX = 0, velocidadY = 0; // Velocidad de movimiento de la serpiente
 let puntos = 0; // Puntuación del jugador
 let record = localStorage.getItem("Récord") || 0; // Puntuación récord almacenada en el almacenamiento local
 elementoRecord.innerText = `Récord: ${record}`;
-
+let setIntervalId; // ID del intervalo para actualizar el juego
 // Función para actualizar la tabla de clasificación en la página
+
 const actualizarRankings = () => {
     // Obtener las clasificaciones del almacenamiento local 
     let rankings = JSON.parse(localStorage.getItem("rankings")) || [];
